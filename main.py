@@ -196,7 +196,7 @@ def main():
                 points_added = adjust_loyalty_points(loyalty_account_id, points_to_add)
                 if points_added:
                     logger.info(f"Successfully added {points_to_add} points to customer {customer['customerId']}. New balance should be {current_points + points_to_add}")
-                    send_sms(customer['phone'], f"STORMY VAPE - Long time no see! We've added {points_to_add} loyalty points to your account. Visit us soon to use them!")
+                    send_sms(customer['phone'], f"STORMY- Long time no see! We've added {points_to_add} loyalty points to your account. Visit us soon to use them!")
                     customers_with_points.append(customer['customerId'])
                 else:
                     logger.error(f"Failed to add loyalty points for customer {customer['customerId']}. No SMS sent.")

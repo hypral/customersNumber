@@ -189,7 +189,7 @@ def fetch_and_send_discounts():
         for customer in inactive_customers:
             if customer['customerId'] not in customers_with_discount:
                 add_discount_to_customer(customer['customerId'], discount_id)
-                send_sms(customer['phone'], "STORMY VAPE - Long time no see, here’s $5 off has been added to your next order! Type in your number when you arrive to claim.")
+                send_sms(customer['phone'], "STORMY- Long time no see, here’s $5 off has been added to your next order! Type in your number when you arrive to claim.")
                 customers_with_discount.append(customer['customerId'])
 
     save_customers_with_discount(customers_with_discount)
